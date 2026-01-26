@@ -1,0 +1,473 @@
+/* G.A.D.A VvsV Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #7c3aed;
+    --secondary-color: #f59e0b;
+    --accent-color: #10b981;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+    --white: #ffffff;
+    --purple-dark: #5b21b6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+.nav-brand h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.nav-brand span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--purple-dark) 100%);
+    color: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.95;
+}
+
+.hero-tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-light);
+}
+
+/* Intro */
+.intro {
+    padding: 4rem 0;
+    background: var(--bg-light);
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.8;
+}
+
+/* Features */
+.features {
+    padding: 5rem 0;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Virtue vs Vice */
+.vvv-concept {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.vvv-concept h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.vvv-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.vvv-column {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.vvv-column h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.vvv-column ul {
+    list-style: none;
+}
+
+.vvv-column li {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: var(--bg-light);
+    border-radius: 5px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.vvv-note {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* How It Works */
+.how-it-works {
+    padding: 5rem 0;
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.step {
+    text-align: center;
+    padding: 2rem;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 auto 1rem;
+}
+
+.step h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.step p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* About */
+.about {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about p {
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.8;
+}
+
+/* Download */
+.download {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--purple-dark) 100%);
+    color: var(--white);
+    text-align: center;
+}
+
+.download h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.download-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.btn-download {
+    background: var(--white);
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.btn-download:hover {
+    transform: translateY(-5px);
+}
+
+.download-icon {
+    font-size: 2rem;
+}
+
+.btn-download div {
+    text-align: left;
+}
+
+.btn-download small {
+    display: block;
+    font-size: 0.8rem;
+}
+
+.btn-download strong {
+    font-size: 1.2rem;
+}
+
+.download-note {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+    opacity: 0.9;
+}
+
+.early-access-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.early-access-form input {
+    flex: 1;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.early-access-form button {
+    padding: 1rem 2rem;
+}
+
+/* Footer */
+.footer {
+    background: var(--text-dark);
+    color: var(--white);
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.footer-section a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .vvv-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .download-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .early-access-form {
+        flex-direction: column;
+    }
+}
