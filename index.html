@@ -125,7 +125,7 @@
     <section id="ministries" class="ministries">
         <div class="container">
             <h2>The 12 Ministries</h2>
-            <p class="section-subtitle">Like the 12 apostles, our ministries represent completion and wholeness in serving those in need.</p>
+            <p class="section-subtitle">Comprehensive programs serving those in need through holistic care and support.</p>
             
             <div class="ministry-grid">
                 <div class="ministry-card">
@@ -568,7 +568,7 @@
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>Switch your services through our R HOME app! Get quotes for solar, internet, cell phones, TV, or merchant services. You get better rates, and 80% of our profits support UCM. It's a win-win way to help without extra cost to you.</p>
+                            <p>Switch your services through our R HOME app! Get quotes for solar, internet, cell phones, TV, or merchant services. You get better rates, and 80% of the profits support UCM. It's a win-win way to help without extra cost to you.</p>
                         </div>
                     </div>
 
@@ -578,7 +578,7 @@
                             <span class="faq-toggle">+</span>
                         </div>
                         <div class="faq-answer">
-                            <p>R HOME is our innovative service-switching platform. Instead of traditional fundraising, we help people save money on services they already pay for (solar, internet, phones, etc.). 80% of our profits go directly to UCM's programs. It's sustainable funding that helps everyone.</p>
+                            <p>R HOME is our innovative service-switching platform. Instead of traditional fundraising, we help people save money on services they already pay for (solar, internet, phones, etc.). 80% of the profits go directly to UCM's programs. It's sustainable funding that helps everyone.</p>
                         </div>
                     </div>
 
@@ -684,7 +684,7 @@
     <section id="services" class="services-donation">
         <div class="container">
             <h2>Can't Donate Cash? Support UCM Through Your Services!</h2>
-            <p class="section-subtitle">Switch services you're already paying for and help restore lives. 80% of our profits go directly to UCM.</p>
+            <p class="section-subtitle">Switch services you're already paying for and help restore lives. 80% of the profits go directly to UCM.</p>
             
             <div class="rhome-cta">
                 <h3>📱 Download the R HOME App</h3>
@@ -710,7 +710,7 @@
                     <li>Visit the R HOME app or website</li>
                     <li>Get quotes for services you need</li>
                     <li>Switch and save money</li>
-                    <li>80% of our profits help UCM restore lives!</li>
+                    <li>80% of the profits help UCM restore lives!</li>
                 </ol>
                 <p><strong>It's that simple.</strong> You get better service at competitive rates, and you're supporting homeless recovery, addiction treatment, and family restoration.</p>
             </div>
@@ -741,6 +741,116 @@
                     <input type="text" name="subject" placeholder="Subject">
                     <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intake Form Section -->
+    <section id="intake-form" class="intake-form">
+        <div class="container">
+            <h2>Get Help - Start Here</h2>
+            <p class="section-subtitle">Tell us about your situation so we can connect you with the right support and services.</p>
+            
+            <div class="intake-content">
+                <div class="intake-info">
+                    <h3>How This Works</h3>
+                    <ul>
+                        <li><strong>Fill out this form</strong> - Takes 2-3 minutes</li>
+                        <li><strong>We'll contact you</strong> - Usually within 24 hours</li>
+                        <li><strong>Get connected</strong> - To the help you need most</li>
+                        <li><strong>Start your journey</strong> - Toward restoration and hope</li>
+                    </ul>
+                    <p><strong>All information is confidential.</strong> You only share what you're comfortable sharing.</p>
+                </div>
+
+                <form class="intake-form-container" name="ucm-intake" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="ucm-intake">
+                    
+                    <div class="form-section">
+                        <h4>Basic Information (Optional)</h4>
+                        <div class="form-row">
+                            <input type="text" name="first-name" placeholder="First Name">
+                            <input type="text" name="preferred-name" placeholder="Preferred Name/Nickname">
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" name="phone" placeholder="Phone Number (Optional)">
+                            <input type="email" name="email" placeholder="Email (Optional)">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Immediate Needs (Check all that apply)</h4>
+                        <div class="checkbox-grid">
+                            <label><input type="checkbox" name="needs" value="food"> Food - Need meals today</label>
+                            <label><input type="checkbox" name="needs" value="water"> Clean drinking water</label>
+                            <label><input type="checkbox" name="needs" value="shelter"> Shelter - Place to stay tonight</label>
+                            <label><input type="checkbox" name="needs" value="medical"> Medical care - Urgent health needs</label>
+                            <label><input type="checkbox" name="needs" value="clothing"> Clothing</label>
+                            <label><input type="checkbox" name="needs" value="transportation"> Transportation help</label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Current Situation</h4>
+                        <label>How long have you been without housing?</label>
+                        <select name="housing-duration">
+                            <option value="">Select...</option>
+                            <option value="less-than-week">Less than 1 week</option>
+                            <option value="1-4-weeks">1-4 weeks</option>
+                            <option value="1-6-months">1-6 months</option>
+                            <option value="6-plus-months">6+ months</option>
+                            <option value="years">Years</option>
+                            <option value="have-housing">I have housing</option>
+                        </select>
+
+                        <label>Where are you staying currently?</label>
+                        <select name="current-staying">
+                            <option value="">Select...</option>
+                            <option value="street">On the street</option>
+                            <option value="car">In a car</option>
+                            <option value="shelter">Shelter</option>
+                            <option value="friends">Friend's place</option>
+                            <option value="family">Family member's place</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>What Help Do You Want? (Check all that apply)</h4>
+                        <div class="checkbox-grid">
+                            <label><input type="checkbox" name="help-wanted" value="housing"> Housing - Finding a place to stay</label>
+                            <label><input type="checkbox" name="help-wanted" value="food"> Food - Regular meals</label>
+                            <label><input type="checkbox" name="help-wanted" value="job"> Job - Finding work</label>
+                            <label><input type="checkbox" name="help-wanted" value="benefits"> Benefits - Government assistance</label>
+                            <label><input type="checkbox" name="help-wanted" value="medical"> Medical - Healthcare needs</label>
+                            <label><input type="checkbox" name="help-wanted" value="mental-health"> Mental Health - Counseling/therapy</label>
+                            <label><input type="checkbox" name="help-wanted" value="addiction"> Addiction - Recovery support</label>
+                            <label><input type="checkbox" name="help-wanted" value="spiritual"> Spiritual - Faith community, prayer</label>
+                            <label><input type="checkbox" name="help-wanted" value="family"> Family - Reconnecting with loved ones</label>
+                            <label><input type="checkbox" name="help-wanted" value="legal"> Legal - Court issues, ID replacement</label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <label>Tell us more about your situation (Optional)</label>
+                        <textarea name="additional-info" rows="4" placeholder="Share anything else that would help us understand how to best support you..."></textarea>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>How soon do you need help?</h4>
+                        <select name="urgency" required>
+                            <option value="">Select...</option>
+                            <option value="immediate">Today - Emergency situation</option>
+                            <option value="this-week">This week - Urgent</option>
+                            <option value="this-month">This month - Important</option>
+                            <option value="planning">Just planning ahead</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Submit - Get Help</button>
+                    
+                    <p class="form-note">By submitting this form, you're taking the first step toward getting help. We'll contact you soon to discuss your needs and connect you with appropriate services.</p>
                 </form>
             </div>
         </div>
