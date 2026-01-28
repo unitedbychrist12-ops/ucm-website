@@ -1,42 +1,28 @@
 [build]
   publish = "."
-
+  
 [build.environment]
   NODE_VERSION = "18"
 
+# Form handling
+[[forms]]
+  name = "contact"
+
+# Headers for security
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Contact form handling
-[[forms]]
-  name = "contact"
+# Cache static assets
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
 
-# Redirect rules for when you get the other domains
-[[redirects]]
-  from = "https://unitedbychristministries.com/*"
-  to = "https://ucm.live/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://www.unitedbychristministries.com/*"
-  to = "https://ucm.live/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://unitedbychristministries.org/*"
-  to = "https://ucm.live/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://www.unitedbychristministries.org/*"
-  to = "https://ucm.live/:splat"
-  status = 301
-  force = true
+[[headers]]
+  for = "/script.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
