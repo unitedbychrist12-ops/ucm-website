@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSave - Soluciones Confiables | Ahorra Tiempo y Dinero con Servicios de Calidad</title>
+    <meta name="description" content="Ahorra tiempo y dinero con servicios de calidad a precios con descuento. Mejor internet, solar, teléfonos, techos y contratistas. El tiempo es dinero - no desperdicies ninguno con mal servicio.">
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>RSave</h1>
+                    <span>Soluciones Confiables</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#servicios">Servicios</a>
+                    <a href="#ahorros">Tiempo y Dinero</a>
+                    <a href="#contratistas">Contratistas</a>
+                    <a href="#recompensas">Recompensas</a>
+                    <a href="#contacto">Contacto</a>
+                    <a href="../" class="language-toggle">English</a>
+                </div>
+                <div class="nav-cta">
+                    <button class="btn-primary" onclick="openSavingsCalculator()">Mi Cotización</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="brand">RSave - Soluciones Confiables</span>
+                    <span class="tagline">Ahorra Tiempo y Dinero con Servicios de Calidad a Precios con Descuento</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Deja de perder tiempo con proveedores de servicios deficientes. Obtén servicios de mejor calidad a precios con descuento mientras nosotros hacemos el trabajo pesado. El tiempo es dinero - no desperdicies ninguno con soluciones mediocres.
+                </p>
+                
+                <div class="hero-benefits">
+                    <div class="benefit">
+                        <span class="benefit-icon">⏰</span>
+                        <span>Ahorra Tiempo - Nosotros Trabajamos</span>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">💰</span>
+                        <span>Ahorra Dinero - Precios con Descuento</span>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">⭐</span>
+                        <span>Servicios de Calidad - Sin Compromisos</span>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">🎁</span>
+                        <span>Paquetes de Vacaciones Incluidos</span>
+                    </div>
+                </div>
+
+                <!-- Path Selection -->
+                <div class="path-selection">
+                    <h2>Elige Tu Camino para Ahorrar Tiempo y Dinero</h2>
+                    <div class="path-cards">
+                        <div class="path-card homeowner" onclick="selectPath('homeowner')">
+                            <div class="path-icon">🏠</div>
+                            <h3>Propietarios de Casa</h3>
+                            <p class="path-subtitle">Nosotros compramos por ti, traemos lo mejor a tu puerta</p>
+                            <ul>
+                                <li>✓ Internet - Mejores velocidades, precios más bajos</li>
+                                <li>✓ Solar - Elimina facturas de electricidad</li>
+                                <li>✓ Teléfonos - Reduce facturas a la mitad</li>
+                                <li>✓ Techos - Contratistas de calidad verificados</li>
+                                <li>✓ Servicios del Hogar - Encontramos los mejores</li>
+                                <li>✓ Paquetes de Vacaciones - Gratis con servicio</li>
+                            </ul>
+                            <button class="path-btn">Ahorrar Tiempo y Dinero en Casa</button>
+                        </div>
+                        
+                        <div class="path-card business" onclick="selectPath('business')">
+                            <div class="path-icon">🏢</div>
+                            <h3>Dueños de Negocio</h3>
+                            <p class="path-subtitle">Enfócate en tu negocio, nosotros manejamos tus servicios</p>
+                            <ul>
+                                <li>✓ Internet Comercial - Confiable y rápido</li>
+                                <li>✓ Solar Comercial - Reduce costos operativos</li>
+                                <li>✓ Procesamiento de Pagos - Tarifas más bajas</li>
+                                <li>✓ Contratistas Comerciales - Pre-seleccionados</li>
+                                <li>✓ Sistemas Telefónicos - Funciones avanzadas</li>
+                                <li>✓ Incentivos de Vacaciones para Equipos - Mejora moral</li>
+                            </ul>
+                            <button class="path-btn">Ahorrar Tiempo y Dinero en Negocio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="value-prop">
+        <div class="container">
+            <h2 class="section-title">¿Por Qué Perder Tiempo con Mal Servicio?</h2>
+            <div class="value-grid">
+                <div class="value-card problem">
+                    <h3>❌ La Forma Antigua (Desperdiciar Tiempo y Dinero)</h3>
+                    <ul>
+                        <li>Investigar proveedores tú mismo</li>
+                        <li>Ser acosado por 15+ contratistas</li>
+                        <li>Comparar cotizaciones confusas</li>
+                        <li>Esperar haber elegido bien</li>
+                        <li>Lidiar con mal servicio</li>
+                        <li>Pagar precios completos al por menor</li>
+                    </ul>
+                </div>
+                <div class="value-card solution">
+                    <h3>✅ La Forma RSave (Ahorrar Tiempo y Dinero)</h3>
+                    <ul>
+                        <li>Nosotros investigamos y verificamos por ti</li>
+                        <li>Un proveedor de calidad viene a ti</li>
+                        <li>Precios claros y competitivos</li>
+                        <li>Servicio de calidad garantizado</li>
+                        <li>Soporte continuo y monitoreo</li>
+                        <li>Precios con descuento + paquetes de vacaciones</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="time-money-message">
+                <h3>El Tiempo es Dinero. El Dinero es Tiempo. No Desperdicies Ninguno.</h3>
+                <p>Nosotros hacemos el trabajo pesado para que puedas enfocarte en lo que más importa - tu familia, tu negocio, tu vida.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Nuestras Soluciones Confiables - Servicios de Calidad a Precios con Descuento</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Servicios de Internet</h3>
+                    <div class="service-details">
+                        <p><strong>Casa:</strong> Velocidades más rápidas, mejor confiabilidad, precios más bajos</p>
+                        <p><strong>Negocio:</strong> Conectividad de grado comercial a tarifas mayoristas</p>
+                        <p><strong>Tiempo Ahorrado:</strong> No más frustraciones con internet lento</p>
+                    </div>
+                    <div class="service-savings">Ahorra $50-100/mes + Tiempo</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">☀️</div>
+                    <h3>Instalación Solar</h3>
+                    <div class="service-details">
+                        <p><strong>Casa:</strong> Elimina facturas de electricidad, aumenta valor del hogar</p>
+                        <p><strong>Negocio:</strong> Reduce costos operativos, incentivos fiscales</p>
+                        <p><strong>Tiempo Ahorrado:</strong> Manejamos permisos, instalación, todo</p>
+                    </div>
+                    <div class="service-savings">Ahorra $60-200/mes + Tiempo</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Servicios de Teléfono</h3>
+                    <div class="service-details">
+                        <p><strong>Casa:</strong> Mejor cobertura, planes familiares, costos más bajos</p>
+                        <p><strong>Negocio:</strong> Sistemas avanzados, comunicaciones unificadas</p>
+                        <p><strong>Tiempo Ahorrado:</strong> No más llamadas caídas o mal servicio</p>
+                    </div>
+                    <div class="service-savings">Ahorra $30-80/mes + Tiempo</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💳</div>
+                    <h3>Procesamiento de Pagos</h3>
+                    <div class="service-details">
+                        <p><strong>Negocio:</strong> Tarifas más bajas, procesamiento más rápido, mejor soporte</p>
+                        <p><strong>Tiempo Ahorrado:</strong> Pagos simplificados, menos trabajo administrativo</p>
+                    </div>
+                    <div class="service-savings">Ahorra $100-300/mes + Tiempo</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Techos y Contratistas</h3>
+                    <div class="service-details">
+                        <p><strong>Casa/Negocio:</strong> Contratistas de calidad pre-seleccionados</p>
+                        <p><strong>Servicios:</strong> Techos, HVAC, plomería, electricidad, remodelación</p>
+                        <p><strong>Tiempo Ahorrado:</strong> Los encontramos, verificamos, y los traemos a ti</p>
+                    </div>
+                    <div class="service-savings">Ahorra Tiempo + Obtén Trabajo de Calidad</div>
+                </div>
+
+                <div class="service-card featured">
+                    <div class="service-icon">🎁</div>
+                    <h3>Paquetes de Vacaciones</h3>
+                    <div class="service-details">
+                        <p>¡Cada servicio incluye incentivos de viaje!</p>
+                        <p>Paquetes de restaurantes, ahorros en hoteles, vacaciones familiares</p>
+                        <p><strong>Tiempo Ahorrado:</strong> Recompensas pre-planeadas, solo reserva y ve</p>
+                    </div>
+                    <div class="service-savings">GRATIS con cada servicio</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contractor Network Section -->
+    <section id="contratistas" class="contractors">
+        <div class="container">
+            <h2 class="section-title">Red de Contratistas Premium - Nosotros Compramos por Ti</h2>
+            <div class="contractor-content">
+                <div class="contractor-text">
+                    <h3>¿Cansado del Caos de Contratistas? Tenemos una Mejor Manera.</h3>
+                    <p>Deja de perder tiempo siendo acosado por 15 contratistas diferentes. Nosotros encontramos la pareja perfecta para tu proyecto y los traemos directamente a tu puerta.</p>
+                    
+                    <div class="contractor-benefits">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🔍</span>
+                            <div>
+                                <h4>Nosotros Hacemos la Investigación</h4>
+                                <p>Contratistas pre-seleccionados, con licencia, asegurados, mejor calificados</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">📞</span>
+                            <div>
+                                <h4>Una Llamada, Un Contratista</h4>
+                                <p>Sin acoso, sin guerras de ofertas, solo servicio de calidad</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">⭐</span>
+                            <div>
+                                <h4>Calidad Garantizada</h4>
+                                <p>Respaldamos a nuestros contratistas y su trabajo</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🎁</span>
+                            <div>
+                                <h4>Paquetes de Vacaciones Incluidos</h4>
+                                <p>Obtén paquetes de vacaciones con proyectos completados</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contractor-services">
+                    <h4>Servicios de Contratistas Disponibles:</h4>
+                    <div class="service-list">
+                        <div class="service-item">🏠 Techos (Reparación y Reemplazo)</div>
+                        <div class="service-item">❄️ HVAC (Instalación y Reparación)</div>
+                        <div class="service-item">🔧 Plomería (Emergencia y Planeada)</div>
+                        <div class="service-item">⚡ Electricidad (Residencial y Comercial)</div>
+                        <div class="service-item">🏗️ Contratación General</div>
+                        <div class="service-item">🛠️ Remodelación de Cocina y Baño</div>
+                        <div class="service-item">🎨 Pintura (Interior y Exterior)</div>
+                        <div class="service-item">🪟 Ventanas y Puertas</div>
+                        <div class="service-item">🌿 Paisajismo y Diseño</div>
+                        <div class="service-item">🏢 Construcción Comercial</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Savings Calculator Modal -->
+    <div id="savingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSavingsCalculator()">&times;</span>
+            <div id="homeownerCalculator" class="calculator">
+                <h2>🏠 Calculadora de Ahorros de Tiempo y Dinero para el Hogar</h2>
+                <form id="homeownerForm">
+                    <div class="form-group">
+                        <label>Facturas Mensuales Actuales y Pérdidas de Tiempo:</label>
+                        <input type="number" id="homeInternet" placeholder="Internet: $___/mes">
+                        <input type="number" id="homeCellPhones" placeholder="Teléfonos: $___/mes">
+                        <input type="number" id="homeElectric" placeholder="Factura de Luz: $___/mes">
+                        <div class="time-question">
+                            <label>Horas por mes lidiando con problemas de mal servicio:</label>
+                            <input type="number" id="homeTimeWasted" placeholder="Horas perdidas: ___/mes">
+                        </div>
+                    </div>
+                    <button type="button" onclick="calculateHomeSavings()" class="btn-primary">Calcular Mis Ahorros de Tiempo y Dinero</button>
+                </form>
+                <div id="homeResults" class="results"></div>
+            </div>
+
+            <div id="businessCalculator" class="calculator" style="display: none;">
+                <h2>🏢 Calculadora de Ahorros de Tiempo y Dinero para Negocios</h2>
+                <form id="businessForm">
+                    <div class="form-group">
+                        <label>Gastos Mensuales Actuales y Drenes de Tiempo:</label>
+                        <input type="number" id="bizInternet" placeholder="Internet Comercial: $___/mes">
+                        <input type="number" id="bizMerchant" placeholder="Procesamiento: $___/mes">
+                        <input type="number" id="bizPhone" placeholder="Sistema Telefónico: $___/mes">
+                        <input type="number" id="bizEnergy" placeholder="Costos de Energía: $___/mes">
+                        <div class="time-question">
+                            <label>Horas por mes lidiando con problemas de servicio:</label>
+                            <input type="number" id="bizTimeWasted" placeholder="Horas perdidas: ___/mes">
+                        </div>
+                    </div>
+                    <button type="button" onclick="calculateBusinessSavings()" class="btn-primary">Calcular Mis Ahorros de Tiempo y Dinero</button>
+                </form>
+                <div id="businessResults" class="results"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vacation Rewards Section -->
+    <section id="recompensas" class="rewards">
+        <div class="container">
+            <h2 class="section-title">Ahorra Tiempo, Ahorra Dinero, Obtén Paquetes de Vacaciones</h2>
+            <div class="rewards-content">
+                <div class="rewards-text">
+                    <h3>Servicio de Calidad + Precios con Descuento + Paquetes de Vacaciones</h3>
+                    <p>¿Por qué conformarse solo con ahorrar dinero? Con RSave, obtienes servicios de mejor calidad a precios con descuento, ahorras tiempo al dejarnos manejar todo, Y obtienes paquetes de vacaciones para disfrutar el tiempo que has ahorrado.</p>
+                    
+                    <div class="reward-tiers">
+                        <div class="tier">
+                            <h4>Servicio de Internet</h4>
+                            <p>Paquete de Restaurantes de $200 + Mejor Servicio</p>
+                        </div>
+                        <div class="tier">
+                            <h4>Instalación Solar</h4>
+                            <p>Paquete de Vacaciones de $1,500 + Cero Facturas de Electricidad</p>
+                        </div>
+                        <div class="tier">
+                            <h4>Servicios de Contratistas</h4>
+                            <p>Paquete de Vacaciones de $500-1,000 + Trabajo de Calidad</p>
+                        </div>
+                        <div class="tier">
+                            <h4>Servicios Comerciales</h4>
+                            <p>Paquete de Vacaciones para Equipos de $1,000+ + Eficiencia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rewards-visual">
+                    <div class="vacation-showcase">
+                        <div class="vacation-card">
+                            <h4>🏖️ Escapadas a la Playa</h4>
+                            <p>Paquetes de vacaciones de 3-7 días</p>
+                            <small>Disfruta el tiempo que ahorraste</small>
+                        </div>
+                        <div class="vacation-card">
+                            <h4>🍽️ Paquetes de Restaurantes</h4>
+                            <p>Experiencias gastronómicas a nivel nacional</p>
+                            <small>Celebra tus ahorros</small>
+                        </div>
+                        <div class="vacation-card">
+                            <h4>🏨 Ahorros en Hoteles</h4>
+                            <p>Tarjetas de ahorro de $100-300 en hoteles</p>
+                            <small>Viaja más, gasta menos</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">¿Listo para Ahorrar Tiempo y Dinero?</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm" netlify>
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Nombre Completo" required>
+                            <input type="email" name="email" placeholder="Correo Electrónico" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" name="phone" placeholder="Número de Teléfono" required>
+                            <select name="service_type" required>
+                                <option value="">¿Qué servicio te interesa más?</option>
+                                <option value="internet">Servicios de Internet</option>
+                                <option value="solar">Instalación Solar</option>
+                                <option value="phones">Servicios de Teléfono</option>
+                                <option value="merchant">Procesamiento de Pagos</option>
+                                <option value="contractors">Techos/Contratistas</option>
+                                <option value="multiple">Múltiples Servicios</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <select name="customer_type" required>
+                                <option value="">Tipo de Cliente</option>
+                                <option value="homeowner">Propietario de Casa</option>
+                                <option value="business">Dueño de Negocio</option>
+                                <option value="both">Ambos</option>
+                            </select>
+                            <input type="text" name="current_bills" placeholder="Facturas Mensuales Actuales (estimado)">
+                        </div>
+                        <textarea name="message" placeholder="¿Cuál es tu mayor pérdida de tiempo o frustración con servicios? (opcional)"></textarea>
+                        <button type="submit" class="btn-primary">Obtener Mi Cotización de Ahorro de Tiempo y Dinero</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Deja de Perder Tiempo - Déjanos Manejar Todo</h3>
+                    <p>Nuestros especialistas en soluciones confiables te ahorrarán tiempo haciendo toda la investigación, verificación y coordinación. Obtienes servicios de calidad a precios con descuento más paquetes de vacaciones.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <span class="method-icon">📞</span>
+                            <div>
+                                <strong>Llama Ahora - Ahorra Tiempo</strong>
+                                <p>(951) 992-2068</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <span class="method-icon">✉️</span>
+                            <div>
+                                <strong>Envíanos un Email</strong>
+                                <p>info@rsave.net</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <span class="method-icon">🕒</span>
+                            <div>
+                                <strong>Horario de Atención</strong>
+                                <p>Lun-Vie: 8AM-6PM PST</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="guarantee">
+                        <h4>🏆 Nuestra Garantía de Tiempo y Dinero</h4>
+                        <p>Si no te ahorramos tiempo y dinero mientras mejoramos la calidad de tu servicio, lo arreglaremos o te devolvemos tu dinero.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RSave - Soluciones Confiables</h3>
+                    <p>Ahorra Tiempo y Dinero con Servicios de Calidad a Precios con Descuento</p>
+                    <p><em>"El Tiempo es Dinero. El Dinero es Tiempo. No Desperdicies Ninguno."</em></p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Servicios de Internet</a></li>
+                        <li><a href="#servicios">Instalación Solar</a></li>
+                        <li><a href="#servicios">Servicios de Teléfono</a></li>
+                        <li><a href="#servicios">Procesamiento de Pagos</a></li>
+                        <li><a href="#contratistas">Techos y Contratistas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Por Qué RSave</h4>
+                    <ul>
+                        <li><a href="#ahorros">Ahorrar Tiempo y Dinero</a></li>
+                        <li><a href="#contratistas">Contratistas de Calidad</a></li>
+                        <li><a href="#recompensas">Paquetes de Vacaciones</a></li>
+                        <li><a href="tel:+19519922068">Llama (951) 992-2068</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="https://ucm.live" target="_blank">Asociación UCM</a></li>
+                        <li><a href="../">English</a></li>
+                        <li><a href="#privacy">Política de Privacidad</a></li>
+                        <li><a href="#terms">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RSave - Soluciones Confiables. Todos los derechos reservados.</p>
+                <p>Sirviendo a California y Texas - Nosotros hacemos el trabajo pesado para que tú no tengas que hacerlo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Spanish-specific calculator modifications
+        function calculateHomeSavings() {
+            const internet = parseFloat(document.getElementById('homeInternet').value) || 0;
+            const cellPhones = parseFloat(document.getElementById('homeCellPhones').value) || 0;
+            const electric = parseFloat(document.getElementById('homeElectric').value) || 0;
+            const timeWasted = parseFloat(document.getElementById('homeTimeWasted').value) || 0;
+            
+            const internetSavings = Math.min(internet * 0.4, 50);
+            const phoneSavings = Math.min(cellPhones * 0.5, 40);
+            const solarSavings = Math.min(electric * 0.8, 200);
+            const totalSavings = internetSavings + phoneSavings + solarSavings;
+            const annualSavings = totalSavings * 12;
+            
+            // Calculate time value (assuming $25/hour)
+            const timeValue = timeWasted * 25;
+            const annualTimeValue = timeValue * 12;
+            
+            let vacationReward = '';
+            if (totalSavings >= 150) {
+                vacationReward = 'Paquete de Vacaciones Premium de $1,500';
+            } else if (totalSavings >= 100) {
+                vacationReward = 'Paquete de Vacaciones de $1,000';
+            } else if (totalSavings >= 50) {
+                vacationReward = 'Paquete de Restaurantes de $500';
+            } else {
+                vacationReward = 'Paquete de Restaurantes de $200';
+            }
+            
+            const resultsHTML = `
+                <h3>💰 Tus Ahorros Mensuales Potenciales: $${totalSavings.toFixed(0)}</h3>
+                <div style="margin: 20px 0;">
+                    <p><strong>✓ Internet:</strong> Ahorra $${internetSavings.toFixed(0)}/mes (velocidades más rápidas)</p>
+                    <p><strong>✓ Teléfonos:</strong> Ahorra $${phoneSavings.toFixed(0)}/mes (mejor cobertura)</p>
+                    <p><strong>✓ Solar:</strong> Ahorra $${solarSavings.toFixed(0)}/mes (elimina factura de luz)</p>
+                </div>
+                <div style="background: #10b981; color: white; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                    <p><strong>Ahorros Anuales en Dinero: $${annualSavings.toFixed(0)}</strong></p>
+                    ${timeWasted > 0 ? `<p><strong>Valor del Tiempo Ahorrado: $${timeValue.toFixed(0)}/mes ($${annualTimeValue.toFixed(0)}/año)</strong></p>` : ''}
+                </div>
+                <div style="background: #f59e0b; color: white; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                    <p><strong>🎁 BONO: ${vacationReward} GRATIS cuando cambies!</strong></p>
+                </div>
+                <div style="background: #3b82f6; color: white; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                    <p><strong>⏰ El Tiempo es Dinero - Nosotros Hacemos el Trabajo Pesado</strong></p>
+                    <p>Mientras tú disfrutas tu tiempo libre, nosotros manejamos todo el papeleo, instalación y soporte.</p>
+                </div>
+                <button onclick="scheduleConsultation('homeowner')" class="btn-primary" style="width: 100%; margin-top: 20px;">
+                    Programar Consulta Gratuita
+                </button>
+            `;
+            
+            document.getElementById('homeResults').innerHTML = resultsHTML;
+        }
+
+        function calculateBusinessSavings() {
+            const internet = parseFloat(document.getElementById('bizInternet').value) || 0;
+            const merchant = parseFloat(document.getElementById('bizMerchant').value) || 0;
+            const phone = parseFloat(document.getElementById('bizPhone').value) || 0;
+            const energy = parseFloat(document.getElementById('bizEnergy').value) || 0;
+            const timeWasted = parseFloat(document.getElementById('bizTimeWasted').value) || 0;
+            
+            const internetSavings = Math.min(internet * 0.3, 100);
+            const merchantSavings = Math.min(merchant * 0.4, 300);
+            const phoneSavings = Math.min(phone * 0.25, 50);
+            const solarSavings = Math.min(energy * 0.6, 200);
+            const totalSavings = internetSavings + merchantSavings + phoneSavings + solarSavings;
+            const annualSavings = totalSavings * 12;
+            
+            // Calculate time value (assuming $50/hour for business time)
+            const timeValue = timeWasted * 50;
+            const annualTimeValue = timeValue * 12;
+            
+            let vacationReward = '';
+            if (totalSavings >= 300) {
+                vacationReward = 'Paquete de Vacaciones Ejecutivas para Equipos de $2,000';
+            } else if (totalSavings >= 200) {
+                vacationReward = 'Paquete de Vacaciones para Equipos de $1,500';
+            } else if (totalSavings >= 100) {
+                vacationReward = 'Paquete de Vacaciones Comerciales de $1,000';
+            } else {
+                vacationReward = 'Paquete de Restaurantes para Equipos de $500';
+            }
+            
+            const resultsHTML = `
+                <h3>📈 Tus Ahorros Mensuales Potenciales: $${totalSavings.toFixed(0)}</h3>
+                <div style="margin: 20px 0;">
+                    <p><strong>✓ Internet:</strong> Ahorra $${internetSavings.toFixed(0)}/mes (más rápido, más confiable)</p>
+                    <p><strong>✓ Tarifas de Procesamiento:</strong> Ahorra $${merchantSavings.toFixed(0)}/mes (tarifas más bajas)</p>
+                    <p><strong>✓ Sistema Telefónico:</strong> Ahorra $${phoneSavings.toFixed(0)}/mes (funciones avanzadas)</p>
+                    <p><strong>✓ Solar:</strong> Ahorra $${solarSavings.toFixed(0)}/mes (instalación comercial)</p>
+                </div>
+                <div style="background: #10b981; color: white; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                    <p><strong>Ahorros Anuales en Dinero: $${annualSavings.toFixed(0)}</strong></p>
+                    ${timeWasted > 0 ? `<p><strong>Valor del Tiempo Comercial Ahorrado: $${timeValue.toFixed(0)}/mes ($${annualTimeValue.toFixed(0)}/año)</strong></p>` : ''}
+                </div>
+                <div style="background: #f59e0b; color: white; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                    <p><strong>🎁 BONO: ${vacationReward} GRATIS para tu equipo!</strong></p>
+                </div>
+                <div style="background: #3b82f6; color: white; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                    <p><strong>⏰ Enfócate en Tu Negocio - Nosotros Manejamos Tus Servicios</strong></p>
+                    <p>Mientras tú haces crecer tu negocio, nosotros optimizamos tus servicios y costos operativos.</p>
+                </div>
+                <button onclick="scheduleConsultation('business')" class="btn-primary" style="width: 100%; margin-top: 20px;">
+                    Programar Consulta Comercial
+                </button>
+            `;
+            
+            document.getElementById('businessResults').innerHTML = resultsHTML;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="United by Christ Ministries - 501(c)(3) nonprofit dedicated to restoring lives through faith, housing, and comprehensive support programs.">
+    <meta name="theme-color" content="#663399">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>United by Christ Ministries | Restoring Lives Through Faith</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="brand-text">
+                    <h1>UCM</h1>
+                    <span>United by Christ Ministries</span>
+                </div>
+            </div>
+            <button class="nav-toggle" id="navToggle">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#ministries">Ministries</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#donate" class="btn-donate">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-background.jpg');">
+        <div class="hero-overlay">
+            <div class="container hero-content">
+                <h1 class="hero-title">Restoring Lives Through Faith</h1>
+                <p class="hero-subtitle">Empowering individuals to achieve holistic well-being through comprehensive programs addressing mental, physical, financial, and spiritual needs.</p>
+                <div class="hero-buttons">
+                    <a href="#donate" class="btn btn-primary">Donate Now</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p>Lives Impacted Annually</p>
+                    </div>
+                    <div class="stat">
+                        <h3>12</h3>
+                        <p>Ministry Programs</p>
+                    </div>
+                    <div class="stat">
+                        <h3>501(c)(3)</h3>
+                        <p>Tax-Exempt Nonprofit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="mission">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p class="mission-text">"At United by Christ Ministries, our mission is to reduce homelessness and empower individuals to achieve holistic well-being by providing comprehensive 1, 2, 3, and 4 step programs that address mental, physical, financial, and spiritual needs. Through compassionate support and guidance, we aim to restore hope and dignity, equipping those we serve to rejoin society as productive and fulfilled citizens, united by their faith and renewed purpose."</p>
+            <p style="text-align: center; margin-top: 2rem; font-weight: 600; color: var(--primary-color);">501(c)(3) Tax-Exempt | EIN: 82-5038049</p>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="donate">
+        <div class="container">
+            <h2>Make a Difference Today</h2>
+            <p class="section-subtitle">United by Christ Ministries is a 501(c)(3) tax-exempt organization. Your donation is tax-deductible.<br><strong>EIN: 82-5038049</strong></p>
+            
+            <div class="donate-transparency">
+                <h3>How Your Donation Is Used</h3>
+                <p><strong>80% goes directly to programs</strong> - addiction counseling, housing assistance, job training, and spiritual support.</p>
+                <p><strong>20% covers essential operations</strong> - licensed medical staff, facility maintenance, and administration.</p>
+                <p><em>This 80/20 split represents excellent stewardship - most nonprofits use 25-35% for overhead.</em></p>
+            </div>
+            
+            <div class="donate-options">
+                <div class="donate-card">
+                    <h3>One-Time Donation</h3>
+                    <p>Make a single contribution to support our mission.</p>
+                    <button class="btn btn-primary">Donate Once</button>
+                </div>
+                <div class="donate-card featured">
+                    <h3>Monthly Pledge</h3>
+                    <p>Become a sustaining partner with recurring monthly support.</p>
+                    <button class="btn btn-primary">Give Monthly</button>
+                </div>
+                <div class="donate-card">
+                    <h3>Hall of Fame</h3>
+                    <p>Major donors are honored in our History Book of Origin.</p>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>We'd love to hear from you. Whether you're seeking help, want to volunteer, or interested in partnering with us.</p>
+                    <div class="contact-details">
+                        <p><strong>Phone:</strong> (951) 992-2068</p>
+                        <p><strong>Email:</strong> info@ucm.live</p>
+                        <p><strong>Website:</strong> ucm.live</p>
+                        <p><strong>Locations:</strong> California & Texas</p>
+                    </div>
+                </div>
+                <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>United by Christ Ministries</h3>
+                    <p>501(c)(3) Tax-Exempt Nonprofit</p>
+                    <p>Federal EIN: 82-5038049</p>
+                    <p>Restoring lives through faith since 2018</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#ministries">Ministries</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 United by Christ Ministries. All rights reserved.</p>
+                <p>With much love, United by Christ Ministries 🙏</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

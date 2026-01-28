@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United by Christ Ministries - Donation Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .form-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+        
+        .form-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .testimony-section {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .testimony-section h2 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .scripture-section {
+            background: #ecfdf5;
+            border: 1px solid #10b981;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+        }
+        
+        .scripture-section h3 {
+            color: #047857;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .scripture-verse {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+        }
+        
+        .verse-reference {
+            font-weight: bold;
+            color: #065f46;
+        }
+        
+        .form-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .form-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 1rem;
+        }
+        
+        .form-section h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1e3a8a;
+            box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.1);
+        }
+        
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .donation-option {
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .donation-option:hover {
+            border-color: #1e3a8a;
+            background-color: #f8fafc;
+        }
+        
+        .donation-option.selected {
+            border-color: #1e3a8a;
+            background-color: #eff6ff;
+        }
+        
+        .donation-amount {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pledge-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .pledge-option {
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .pledge-option:hover {
+            border-color: #10b981;
+            background-color: #f0fdf4;
+        }
+        
+        .pledge-option.selected {
+            border-color: #10b981;
+            background-color: #ecfdf5;
+        }
+        
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .payment-method {
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .payment-method:hover {
+            border-color: #1e3a8a;
+        }
+        
+        .payment-method.selected {
+            border-color: #1e3a8a;
+            background-color: #eff6ff;
+        }
+        
+        .alternative-support {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .alternative-support h3 {
+            color: #92400e;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .alternative-support p {
+            color: #78350f;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .service-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .service-option {
+            background: white;
+            border: 1px solid #d97706;
+            border-radius: 5px;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .service-option:hover {
+            background-color: #fef3c7;
+        }
+        
+        .submit-btn {
+            background: #1e3a8a;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+        
+        .submit-btn:hover {
+            background: #1e40af;
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        
+        .contact-info h4 {
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .volunteer-section {
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .volunteer-section h3 {
+            color: #0c4a6e;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            
+            .donation-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .pledge-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-methods {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h1>United by Christ Ministries</h1>
+            <p>Reaching out to those in need of God's Love, Grace and Mercy</p>
+        </div>
+        
+        <form class="form-container" name="ucm-donation" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="ucm-donation">
+            
+            <!-- Volunteer Information Section -->
+            <div class="volunteer-section">
+                <h3>Volunteer Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="volunteer-name">Volunteer Name</label>
+                        <input type="text" id="volunteer-name" name="volunteer-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="visit-date">Date of Visit</label>
+                        <input type="date" id="visit-date" name="visit-date" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="visit-location">Visit Location/Address</label>
+                    <input type="text" id="visit-location" name="visit-location" placeholder="Street address or general area">
+                </div>
+            </div>
+            
+            <!-- UCM Mission and Testimony -->
+            <div class="testimony-section">
+                <h2>Our Mission & Testimony</h2>
+                <p><strong>United by Christ Ministries is dedicated to reach out to the Alcoholic, Drug Addict, Gang Member, Felon, Incarcerated, Homeless Adults & Families and any Souls in need of Gods Love, Grace and Mercy. The Ministries goal is to help save souls through Christ, rehabilitate, house, educate and prepare everyone for a better future...</strong></p>
+                
+                <p>I once was lost in search for answers and needed a drastic change in my life. Someone once asked me, how would you like to reach out to alcoholics, drug addicts and gang members out in the streets and I replied I would love to. So I attended a Family Assembly with Barrios Unidos En Cristo in Long Beach at St. Athanasius Catholic Church. This is where my journey in Christ begun. God blessed me that day and I had my first encounter with our Lord Jesus Christ. I made a commitment with God that day; to help other people like me who were struggling to make a change in they're life due to alcohol, drugs and violence...</p>
+                
+                <p>The Holy Spirit immediately started doing a radical change in me and my life. I started to serve in this Ministry called Barrios Unidos En Cristo. (Neighborhoods United in Christ). Until I had to move due to a work related transfer. I had moved for a better opportunity. Financially I was doing great but spiritually I was going through some difficult times and tribulations. I was only a baby in the faith away from the Ministry and Church Community. It became a struggle to stay connected and I became spiritually devastated in need of Gods Grace more than ever. God never gave up on me and strengthened me through my hardships; which now serves as my testimonial.</p>
+                
+                <p>Years later I felt the urge and the calling to start up a similar Ministry and keep my promise that I once made to God... Through United by Christ Ministries, God has bestowed big goals and the vision is to go Nation Wide and eventually WorldWide with our Ministry to help every person and family in need... We will be launching large marketing campaigns to hit The Ministries goals but we can't get there without you and or the smaller steps we need to take. All of your prayers will help the Ministries initial launch and future success.</p>
+                
+                <p>We are still in the infinite stages of our Ministry and have made a promise to do something special to all who help contribute to the cause. We will keep you and your family in our prayers and add your name to the United by Christ Ministries Hall of Fame History Book of Origin as a thank you; unless you decide to remain anonymous... We will also keep you updated on our progress and Ministries expansion. Once we launch our website you'll continue to be updated in case you'd like to follow us. We will have monthly pledges and one time contributions. UC Ministries will also be looking for volunteers for those called to serve.</p>
+                
+                <p><strong>On behalf of United by Christ, we would like to thank you for taking the time to look at our inspired Ministry through God the Father, the Son and the Holy Spirit, Amen. Please keep us in your prayers.</strong></p>
+                
+                <p style="text-align: center; margin-top: 1rem;"><strong>With much love,<br>United by Christ Ministries</strong></p>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="form-section">
+                <h3>Contact Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-number">Contact #</label>
+                        <input type="tel" id="contact-number" name="contact-number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="alternate-number">Alternate #</label>
+                        <input type="tel" id="alternate-number" name="alternate-number">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="zip-code">Zip Code</label>
+                    <input type="text" id="zip-code" name="zip-code" required>
+                </div>
+            </div>
+
+            <!-- Support Options -->
+            <div class="form-section">
+                <h3>How Would You Like to Support UCM?</h3>
+                
+                <div style="margin-bottom: 2rem;">
+                    <label style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <input type="radio" name="support-type" value="donation" style="margin-right: 0.5rem;" required>
+                        <strong>I'd like to make a donation to UCM</strong>
+                    </label>
+                    
+                    <label style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <input type="radio" name="support-type" value="services" style="margin-right: 0.5rem;" required>
+                        <strong>I'm interested in cost-saving services that support UCM</strong>
+                    </label>
+                    
+                    <label style="display: flex; align-items: center;">
+                        <input type="radio" name="support-type" value="both" style="margin-right: 0.5rem;" required>
+                        <strong>I'm interested in both donation and cost-saving services</strong>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Donation Section -->
+            <div class="form-section" id="donation-section">
+                <h3>Contribution Amount</h3>
+                
+                <div class="donation-grid">
+                    <div class="donation-option" onclick="selectDonation('25')">
+                        <div class="donation-amount">$25</div>
+                    </div>
+                    <div class="donation-option" onclick="selectDonation('50')">
+                        <div class="donation-amount">$50</div>
+                    </div>
+                    <div class="donation-option" onclick="selectDonation('75')">
+                        <div class="donation-amount">$75</div>
+                    </div>
+                    <div class="donation-option" onclick="selectDonation('100')">
+                        <div class="donation-amount">$100</div>
+                    </div>
+                    <div class="donation-option" onclick="selectDonation('250')">
+                        <div class="donation-amount">$250</div>
+                    </div>
+                    <div class="donation-option" onclick="selectDonation('500')">
+                        <div class="donation-amount">$500</div>
+                    </div>
+                    <div class="donation-option" onclick="selectDonation('1000')">
+                        <div class="donation-amount">$1,000</div>
+                    </div>
+                    <div class="donation-option" onclick="selectDonation('custom')">
+                        <div class="donation-amount">Other</div>
+                    </div>
+                </div>
+                
+                <div class="form-group" style="margin-top: 1rem;">
+                    <label for="special-pledge">Special Pledge Amount $</label>
+                    <input type="number" id="special-pledge" name="special-pledge" placeholder="Enter custom amount" min="1">
+                </div>
+                
+                <h4 style="margin: 2rem 0 1rem 0;">Pledge Options</h4>
+                <div class="pledge-options">
+                    <div class="pledge-option" onclick="selectPledge('12-month')">
+                        <strong>12 Month Pledge</strong>
+                    </div>
+                    <div class="pledge-option" onclick="selectPledge('24-month')">
+                        <strong>24 Month Pledge</strong>
+                    </div>
+                    <div class="pledge-option" onclick="selectPledge('36-month')">
+                        <strong>36 Month Pledge</strong>
+                    </div>
+                </div>
+                
+                <input type="hidden" id="selected-amount" name="selected-amount">
+                <input type="hidden" id="selected-pledge" name="selected-pledge">
+            </div>
+
+            <!-- Payment Method -->
+            <div class="form-section" id="payment-section">
+                <h3>Payment Method</h3>
+                <div class="payment-methods">
+                    <div class="payment-method" onclick="selectPayment('cash')">
+                        <strong>Cash</strong><br>
+                        <small>Receipt provided</small>
+                    </div>
+                    <div class="payment-method" onclick="selectPayment('check')">
+                        <strong>Check</strong><br>
+                        <small>Check #: ___________</small>
+                    </div>
+                    <div class="payment-method" onclick="selectPayment('card')">
+                        <strong>Credit/Debit Card</strong><br>
+                        <small>Secure processing</small>
+                    </div>
+                </div>
+                
+                <div id="card-details" style="display: none; margin-top: 1rem;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="card-number">Credit/Debit Card #</label>
+                            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-name">Name on Card</label>
+                            <input type="text" id="card-name" name="card-name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiration">Expiration Date</label>
+                            <input type="text" id="expiration" name="expiration" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-type">Card Type</label>
+                        <select id="card-type" name="card-type">
+                            <option value="">Select Card Type</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="amex">American Express</option>
+                            <option value="discover">Discover</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <input type="hidden" id="selected-payment" name="selected-payment">
+            </div>
+
+            <!-- Cost-Saving Services Section -->
+            <div class="form-section" id="services-section">
+                <h3>Cost-Saving Services Interest</h3>
+                <p style="margin-bottom: 1rem;">Which services would you like to learn about for potential monthly savings?</p>
+                
+                <div class="service-options">
+                    <div class="service-option">
+                        <input type="checkbox" name="service-interest" value="fiber-internet" style="margin-right: 0.5rem;">
+                        <strong>Fiber Internet</strong><br>
+                        <small>Save $30-80/month</small>
+                    </div>
+                    <div class="service-option">
+                        <input type="checkbox" name="service-interest" value="cell-phones" style="margin-right: 0.5rem;">
+                        <strong>Cell Phone Plans</strong><br>
+                        <small>Save $20-60/month</small>
+                    </div>
+                    <div class="service-option">
+                        <input type="checkbox" name="service-interest" value="solar" style="margin-right: 0.5rem;">
+                        <strong>Solar Installation</strong><br>
+                        <small>Eliminate electric bill</small>
+                    </div>
+                    <div class="service-option">
+                        <input type="checkbox" name="service-interest" value="roofing" style="margin-right: 0.5rem;">
+                        <strong>Roofing Services</strong><br>
+                        <small>Insurance claims</small>
+                    </div>
+                    <div class="service-option">
+                        <input type="checkbox" name="service-interest" value="merchant-services" style="margin-right: 0.5rem;">
+                        <strong>Merchant Services</strong><br>
+                        <small>Business solutions</small>
+                    </div>
+                </div>
+                
+                <div class="form-group" style="margin-top: 1rem;">
+                    <label for="current-bills">What are your current monthly bills for these services?</label>
+                    <textarea id="current-bills" name="current-bills" rows="3" placeholder="Example: Internet $80/month, Cell phones $150/month, Electric bill $200/month"></textarea>
+                </div>
+            </div>
+
+            <!-- Volunteer Notes -->
+            <div class="form-section">
+                <h3>Volunteer Notes</h3>
+                <div class="form-group">
+                    <label for="donor-response">Donor's Response and Engagement</label>
+                    <textarea id="donor-response" name="donor-response" rows="2" placeholder="How did they respond to UCM's mission? Were they engaged?"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="follow-up-needed">Follow-up Needed</label>
+                    <textarea id="follow-up-needed" name="follow-up-needed" rows="2" placeholder="Any specific follow-up actions or timeline?"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="special-circumstances">Special Circumstances or Requests</label>
+                    <textarea id="special-circumstances" name="special-circumstances" rows="2" placeholder="Any special situations, requests, or important notes?"></textarea>
+                </div>
+            </div>
+
+            <!-- Signature Section -->
+            <div class="form-section">
+                <h3>Signature</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signature">Contributor's Signature</label>
+                        <input type="text" id="signature" name="signature" placeholder="Type your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="signature-date">Date</label>
+                        <input type="date" id="signature-date" name="signature-date" required>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Support Form</button>
+            
+            <!-- Scripture Section -->
+            <div class="scripture-section">
+                <h3>Scripture Foundation</h3>
+                
+                <div class="scripture-verse">
+                    <div class="verse-reference">2 Peter, Chapter 1:1-11</div>
+                    <p>1. Symeon Peter, a slave and apostle of Jesus Christ, to those who have received a faith of equal value to ours through the righteousness of our God and savior Jesus Christ:</p>
+                    <p>2. May grace and peace be yours in abundance through knowledge of God and of Jesus our Lord.</p>
+                    <p><strong>The Power of God's Promise.</strong></p>
+                    <p>3. His divine power has bestowed on us everything that makes for life and devotion, through the knowledge of him who called us by his own glory and power.</p>
+                    <p>4. Through these, he has bestowed on us the precious and very great promises, so that through them you may come to share in the divine nature, after escaping from the corruption that is in the world because of evil desire.</p>
+                    <p>5. For this very reason, make every effort to supplement your faith with virtue, virtue with knowledge,</p>
+                    <p>6. Knowledge with self-control, self-control with endurance, endurance with devotion,</p>
+                    <p>7. Devotion with mutual affection, mutual affection with love.</p>
+                    <p>8. If these are yours and increase in abundance, they will keep you from being idle or unfruitful in the knowledge of our Lord Jesus Christ.</p>
+                    <p>9. Anyone who lacks them is blind and shortsighted, forgetful of the cleansing of his past sins.</p>
+                    <p>10. Therefore, brothers, be all the more eager to make your call and election firm, for, in doing so, you will never stumble.</p>
+                    <p>11. For in this way, entry into the eternal kingdom of our Lord and savior Jesus Christ will be richly provided for you.</p>
+                </div>
+                
+                <div class="scripture-verse">
+                    <div class="verse-reference">1 John 3:16-18</div>
+                    <p>16 The way we came to know love was that he laid down his life for us; so we ought to lay down our lives for our brothers. 17 If someone who has worldly means sees a brother in need and refuses him compassion, how can the love of God remain in him? 18 Children, let us love not in word or speech but in deed and truth.</p>
+                </div>
+                
+                <div class="scripture-verse">
+                    <div class="verse-reference">Acts 20:35</div>
+                    <p>In every way I have shown you that by hard work of that sort we must help the weak, and keep in mind the words of the Lord Jesus who himself said, 'It is more blessed to give than to receive.'</p>
+                </div>
+                
+                <div class="scripture-verse">
+                    <div class="verse-reference">Matthew 6:19-21</div>
+                    <p>19 Do not store up for yourselves treasures on earth, where moth and decay destroy, and thieves break in and steal. 20 But store up treasures in heaven, where neither moth nor decay destroys, nor thieves break in and steal. 21 For where your treasure is, there also will your heart be.</p>
+                </div>
+                
+                <div class="scripture-verse">
+                    <div class="verse-reference">1 Thessalonians 1:2</div>
+                    <p>We give thanks to God always for all of you, remembering you in our prayers, unceasingly.</p>
+                </div>
+            </div>
+            
+            <!-- Alternative Support Section -->
+            <div class="alternative-support">
+                <h3>Can't Donate Right Now? You Can Still Help!</h3>
+                <p>If a financial donation isn't possible, you can still support UCM's mission by switching to cost-saving services. When you save money on your monthly bills through our community partners, a portion of those savings supports our programs.</p>
+                
+                <p style="margin-top: 1rem; text-align: center;">
+                    <strong>Contact our community partner at: (951) 992-2068 or visit RSave.com</strong>
+                </p>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h4>For more information, please call or email:</h4>
+                <p><strong>(951) 992-2068</strong></p>
+                <p><strong>info@unitedbychristministries.com</strong></p>
+                <p><strong>www.unitedbychristministries.com</strong></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function selectDonation(amount) {
+            // Remove selected class from all donation options
+            document.querySelectorAll('.donation-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked option
+            event.target.closest('.donation-option').classList.add('selected');
+            
+            // Set hidden form value
+            document.getElementById('selected-amount').value = amount;
+            
+            // Clear custom amount if preset selected
+            if (amount !== 'custom') {
+                document.getElementById('special-pledge').value = '';
+            }
+        }
+        
+        function selectPledge(pledge) {
+            // Remove selected class from all pledge options
+            document.querySelectorAll('.pledge-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked option
+            event.target.closest('.pledge-option').classList.add('selected');
+            
+            // Set hidden form value
+            document.getElementById('selected-pledge').value = pledge;
+        }
+        
+        function selectPayment(method) {
+            // Remove selected class from all payment methods
+            document.querySelectorAll('.payment-method').forEach(method => {
+                method.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked method
+            event.target.closest('.payment-method').classList.add('selected');
+            
+            // Set hidden form value
+            document.getElementById('selected-payment').value = method;
+            
+            // Show/hide card details
+            const cardDetails = document.getElementById('card-details');
+            if (method === 'card') {
+                cardDetails.style.display = 'block';
+            } else {
+                cardDetails.style.display = 'none';
+            }
+        }
+        
+        // Show/hide sections based on support type selection
+        document.querySelectorAll('input[name="support-type"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const donationSection = document.getElementById('donation-section');
+                const paymentSection = document.getElementById('payment-section');
+                const servicesSection = document.getElementById('services-section');
+                
+                if (this.value === 'donation') {
+                    donationSection.style.display = 'block';
+                    paymentSection.style.display = 'block';
+                    servicesSection.style.display = 'none';
+                } else if (this.value === 'services') {
+                    donationSection.style.display = 'none';
+                    paymentSection.style.display = 'none';
+                    servicesSection.style.display = 'block';
+                } else if (this.value === 'both') {
+                    donationSection.style.display = 'block';
+                    paymentSection.style.display = 'block';
+                    servicesSection.style.display = 'block';
+                }
+            });
+        });
+        
+        // Initially hide all sections until selection is made
+        document.getElementById('donation-section').style.display = 'none';
+        document.getElementById('payment-section').style.display = 'none';
+        document.getElementById('services-section').style.display = 'none';
+        
+        // Set today's date as default for signature date
+        document.getElementById('signature-date').valueAsDate = new Date();
+    </script>
+</body>
+</html>

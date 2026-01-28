@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSave - Trusted Solutions | Save Time & Money with Quality Services</title>
+    <meta name="description" content="Save time and money with quality services at discount prices. Better internet, solar, phones, roofing, and contractors. Time is money - don't waste either with poor service.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>RSave</h1>
+                    <span>Trusted Solutions</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#services">Services</a>
+                    <a href="#savings">Time & Money</a>
+                    <a href="#contractors">Contractors</a>
+                    <a href="#rewards">Rewards</a>
+                    <a href="#contact">Contact</a>
+                    <a href="/español" class="language-toggle">Español</a>
+                </div>
+                <div class="nav-cta">
+                    <button class="btn-primary" onclick="openSavingsCalculator()">Get My Quote</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="brand">RSave - Trusted Solutions</span>
+                    <span class="tagline">Save Time & Money with Quality Services at Discount Prices</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Stop wasting time with poor service providers. Get better quality services at discount prices while we do the heavy lifting. Time is money - don't waste either with subpar solutions.
+                </p>
+                
+                <div class="hero-benefits">
+                    <div class="benefit">
+                        <span class="benefit-icon">⏰</span>
+                        <span>Save Time - We Do the Work</span>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">💰</span>
+                        <span>Save Money - Discount Prices</span>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">⭐</span>
+                        <span>Quality Services - No Compromises</span>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">🎁</span>
+                        <span>Vacation Rewards Included</span>
+                    </div>
+                </div>
+
+                <!-- Path Selection -->
+                <div class="path-selection">
+                    <h2>Choose Your Time & Money Saving Path</h2>
+                    <div class="path-cards">
+                        <div class="path-card homeowner" onclick="selectPath('homeowner')">
+                            <div class="path-icon">🏠</div>
+                            <h3>Homeowners</h3>
+                            <p class="path-subtitle">We shop for you, bring the best to your door</p>
+                            <ul>
+                                <li>✓ Internet - Better speeds, lower prices</li>
+                                <li>✓ Solar - Eliminate electric bills</li>
+                                <li>✓ Phones - Cut bills in half</li>
+                                <li>✓ Roofing - Quality contractors vetted</li>
+                                <li>✓ Home Services - We find the best</li>
+                                <li>✓ Vacation Rewards - Free with service</li>
+                            </ul>
+                            <button class="path-btn">Save Time & Money at Home</button>
+                        </div>
+                        
+                        <div class="path-card business" onclick="selectPath('business')">
+                            <div class="path-icon">🏢</div>
+                            <h3>Business Owners</h3>
+                            <p class="path-subtitle">Focus on your business, we handle your services</p>
+                            <ul>
+                                <li>✓ Commercial Internet - Reliable & fast</li>
+                                <li>✓ Business Solar - Reduce operating costs</li>
+                                <li>✓ Merchant Processing - Lower fees</li>
+                                <li>✓ Commercial Contractors - Pre-screened</li>
+                                <li>✓ Business Phone Systems - Advanced features</li>
+                                <li>✓ Team Vacation Incentives - Boost morale</li>
+                            </ul>
+                            <button class="path-btn">Save Time & Money in Business</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="value-prop">
+        <div class="container">
+            <h2 class="section-title">Why Waste Time with Poor Service?</h2>
+            <div class="value-grid">
+                <div class="value-card problem">
+                    <h3>❌ The Old Way (Waste Time & Money)</h3>
+                    <ul>
+                        <li>Research providers yourself</li>
+                        <li>Get harassed by 15+ contractors</li>
+                        <li>Compare confusing quotes</li>
+                        <li>Hope you chose right</li>
+                        <li>Deal with poor service</li>
+                        <li>Pay full retail prices</li>
+                    </ul>
+                </div>
+                <div class="value-card solution">
+                    <h3>✅ The RSave Way (Save Time & Money)</h3>
+                    <ul>
+                        <li>We research and vet for you</li>
+                        <li>One quality provider comes to you</li>
+                        <li>Clear, competitive pricing</li>
+                        <li>Guaranteed quality service</li>
+                        <li>Ongoing support and monitoring</li>
+                        <li>Discount prices + vacation rewards</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="time-money-message">
+                <h3>Time is Money. Money is Time. Don't Waste Either.</h3>
+                <p>We do the heavy lifting so you can focus on what matters most - your family, your business, your life.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Trusted Solutions - Quality Services at Discount Prices</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Internet Services</h3>
+                    <div class="service-details">
+                        <p><strong>Home:</strong> Faster speeds, better reliability, lower prices</p>
+                        <p><strong>Business:</strong> Commercial-grade connectivity at wholesale rates</p>
+                        <p><strong>Time Saved:</strong> No more slow internet frustrations</p>
+                    </div>
+                    <div class="service-savings">Save $50-100/month + Time</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">☀️</div>
+                    <h3>Solar Installation</h3>
+                    <div class="service-details">
+                        <p><strong>Home:</strong> Eliminate electric bills, increase home value</p>
+                        <p><strong>Business:</strong> Reduce operating costs, tax incentives</p>
+                        <p><strong>Time Saved:</strong> We handle permits, installation, everything</p>
+                    </div>
+                    <div class="service-savings">Save $60-200/month + Time</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Phone Services</h3>
+                    <div class="service-details">
+                        <p><strong>Home:</strong> Better coverage, family plans, lower costs</p>
+                        <p><strong>Business:</strong> Advanced systems, unified communications</p>
+                        <p><strong>Time Saved:</strong> No more dropped calls or poor service</p>
+                    </div>
+                    <div class="service-savings">Save $30-80/month + Time</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💳</div>
+                    <h3>Merchant Processing</h3>
+                    <div class="service-details">
+                        <p><strong>Business:</strong> Lower fees, faster processing, better support</p>
+                        <p><strong>Time Saved:</strong> Streamlined payments, less admin work</p>
+                    </div>
+                    <div class="service-savings">Save $100-300/month + Time</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Roofing & Contractors</h3>
+                    <div class="service-details">
+                        <p><strong>Home/Business:</strong> Pre-screened, quality contractors</p>
+                        <p><strong>Services:</strong> Roofing, HVAC, plumbing, electrical, remodeling</p>
+                        <p><strong>Time Saved:</strong> We find them, vet them, bring them to you</p>
+                    </div>
+                    <div class="service-savings">Save Time + Get Quality Work</div>
+                </div>
+
+                <div class="service-card featured">
+                    <div class="service-icon">🎁</div>
+                    <h3>Vacation Rewards</h3>
+                    <div class="service-details">
+                        <p>Every service includes travel incentives!</p>
+                        <p>Restaurant packages, hotel savings, vacation getaways</p>
+                        <p><strong>Time Saved:</strong> Pre-planned rewards, just book and go</p>
+                    </div>
+                    <div class="service-savings">FREE with every service</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contractor Network Section -->
+    <section id="contractors" class="contractors">
+        <div class="container">
+            <h2 class="section-title">Premium Contractor Network - We Do the Shopping for You</h2>
+            <div class="contractor-content">
+                <div class="contractor-text">
+                    <h3>Tired of Contractor Chaos? We Have a Better Way.</h3>
+                    <p>Stop wasting time getting harassed by 15 different contractors. We find the perfect match for your project and bring them directly to your door.</p>
+                    
+                    <div class="contractor-benefits">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🔍</span>
+                            <div>
+                                <h4>We Do the Research</h4>
+                                <p>Pre-screened, licensed, insured, top-rated contractors</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">📞</span>
+                            <div>
+                                <h4>One Call, One Contractor</h4>
+                                <p>No harassment, no bidding wars, just quality service</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">⭐</span>
+                            <div>
+                                <h4>Quality Guaranteed</h4>
+                                <p>We stand behind our contractors and their work</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🎁</span>
+                            <div>
+                                <h4>Vacation Rewards Included</h4>
+                                <p>Get vacation packages with completed projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contractor-services">
+                    <h4>Available Contractor Services:</h4>
+                    <div class="service-list">
+                        <div class="service-item">🏠 Roofing (Repair & Replacement)</div>
+                        <div class="service-item">❄️ HVAC (Installation & Repair)</div>
+                        <div class="service-item">🔧 Plumbing (Emergency & Planned)</div>
+                        <div class="service-item">⚡ Electrical (Residential & Commercial)</div>
+                        <div class="service-item">🏗️ General Contracting</div>
+                        <div class="service-item">🛠️ Kitchen & Bath Remodeling</div>
+                        <div class="service-item">🎨 Painting (Interior & Exterior)</div>
+                        <div class="service-item">🪟 Windows & Doors</div>
+                        <div class="service-item">🌿 Landscaping & Design</div>
+                        <div class="service-item">🏢 Commercial Construction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Savings Calculator Modal -->
+    <div id="savingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSavingsCalculator()">&times;</span>
+            <div id="homeownerCalculator" class="calculator">
+                <h2>🏠 Homeowner Time & Money Savings Calculator</h2>
+                <form id="homeownerForm">
+                    <div class="form-group">
+                        <label>Current Monthly Bills & Time Wasters:</label>
+                        <input type="number" id="homeInternet" placeholder="Internet: $___/month">
+                        <input type="number" id="homeCellPhones" placeholder="Cell Phones: $___/month">
+                        <input type="number" id="homeElectric" placeholder="Electric Bill: $___/month">
+                        <div class="time-question">
+                            <label>Hours per month dealing with poor service issues:</label>
+                            <input type="number" id="homeTimeWasted" placeholder="Hours wasted: ___/month">
+                        </div>
+                    </div>
+                    <button type="button" onclick="calculateHomeSavings()" class="btn-primary">Calculate My Time & Money Savings</button>
+                </form>
+                <div id="homeResults" class="results"></div>
+            </div>
+
+            <div id="businessCalculator" class="calculator" style="display: none;">
+                <h2>🏢 Business Time & Money Savings Calculator</h2>
+                <form id="businessForm">
+                    <div class="form-group">
+                        <label>Current Monthly Expenses & Time Drains:</label>
+                        <input type="number" id="bizInternet" placeholder="Business Internet: $___/month">
+                        <input type="number" id="bizMerchant" placeholder="Merchant Processing: $___/month">
+                        <input type="number" id="bizPhone" placeholder="Phone System: $___/month">
+                        <input type="number" id="bizEnergy" placeholder="Energy Costs: $___/month">
+                        <div class="time-question">
+                            <label>Hours per month dealing with service issues:</label>
+                            <input type="number" id="bizTimeWasted" placeholder="Hours wasted: ___/month">
+                        </div>
+                    </div>
+                    <button type="button" onclick="calculateBusinessSavings()" class="btn-primary">Calculate My Time & Money Savings</button>
+                </form>
+                <div id="businessResults" class="results"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vacation Rewards Section -->
+    <section id="rewards" class="rewards">
+        <div class="container">
+            <h2 class="section-title">Save Time, Save Money, Get Vacation Rewards</h2>
+            <div class="rewards-content">
+                <div class="rewards-text">
+                    <h3>Quality Service + Discount Prices + Vacation Rewards</h3>
+                    <p>Why settle for just saving money? With RSave, you get better quality services at discount prices, save time by letting us handle everything, AND get vacation rewards to enjoy the time you've saved.</p>
+                    
+                    <div class="reward-tiers">
+                        <div class="tier">
+                            <h4>Internet Service</h4>
+                            <p>$200 Restaurant Package + Better Service</p>
+                        </div>
+                        <div class="tier">
+                            <h4>Solar Installation</h4>
+                            <p>$1,500 Vacation Package + Zero Electric Bills</p>
+                        </div>
+                        <div class="tier">
+                            <h4>Contractor Services</h4>
+                            <p>$500-1,000 Vacation Package + Quality Work</p>
+                        </div>
+                        <div class="tier">
+                            <h4>Business Services</h4>
+                            <p>$1,000+ Team Vacation Package + Efficiency</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rewards-visual">
+                    <div class="vacation-showcase">
+                        <div class="vacation-card">
+                            <h4>🏖️ Beach Getaways</h4>
+                            <p>3-7 day vacation packages</p>
+                            <small>Enjoy the time you saved</small>
+                        </div>
+                        <div class="vacation-card">
+                            <h4>🍽️ Restaurant Packages</h4>
+                            <p>Dining experiences nationwide</p>
+                            <small>Celebrate your savings</small>
+                        </div>
+                        <div class="vacation-card">
+                            <h4>🏨 Hotel Savings</h4>
+                            <p>$100-300 hotel savings cards</p>
+                            <small>Travel more, spend less</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Save Time & Money?</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm" netlify>
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Full Name" required>
+                            <input type="email" name="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                            <select name="service_type" required>
+                                <option value="">What service interests you most?</option>
+                                <option value="internet">Internet Services</option>
+                                <option value="solar">Solar Installation</option>
+                                <option value="phones">Phone Services</option>
+                                <option value="merchant">Merchant Processing</option>
+                                <option value="contractors">Roofing/Contractors</option>
+                                <option value="multiple">Multiple Services</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <select name="customer_type" required>
+                                <option value="">Customer Type</option>
+                                <option value="homeowner">Homeowner</option>
+                                <option value="business">Business Owner</option>
+                                <option value="both">Both</option>
+                            </select>
+                            <input type="text" name="current_bills" placeholder="Current Monthly Bills (estimate)">
+                        </div>
+                        <textarea name="message" placeholder="What's your biggest time waster or service frustration? (optional)"></textarea>
+                        <button type="submit" class="btn-primary">Get My Time & Money Saving Quote</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Stop Wasting Time - Let Us Handle Everything</h3>
+                    <p>Our trusted solutions specialists will save you time by doing all the research, vetting, and coordination. You get quality services at discount prices plus vacation rewards.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <span class="method-icon">📞</span>
+                            <div>
+                                <strong>Call Now - Save Time</strong>
+                                <p>(951) 992-2068</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <span class="method-icon">✉️</span>
+                            <div>
+                                <strong>Email Us</strong>
+                                <p>info@rsave.net</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <span class="method-icon">🕒</span>
+                            <div>
+                                <strong>Business Hours</strong>
+                                <p>Mon-Fri: 8AM-6PM PST</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="guarantee">
+                        <h4>🏆 Our Time & Money Guarantee</h4>
+                        <p>If we don't save you time and money while improving your service quality, we'll make it right or refund your money.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RSave - Trusted Solutions</h3>
+                    <p>Save Time & Money with Quality Services at Discount Prices</p>
+                    <p><em>"Time is Money. Money is Time. Don't Waste Either."</em></p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Internet Services</a></li>
+                        <li><a href="#services">Solar Installation</a></li>
+                        <li><a href="#services">Phone Services</a></li>
+                        <li><a href="#services">Merchant Processing</a></li>
+                        <li><a href="#contractors">Roofing & Contractors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Why RSave</h4>
+                    <ul>
+                        <li><a href="#savings">Save Time & Money</a></li>
+                        <li><a href="#contractors">Quality Contractors</a></li>
+                        <li><a href="#rewards">Vacation Rewards</a></li>
+                        <li><a href="tel:+19519922068">Call (951) 992-2068</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="https://ucm.live" target="_blank">UCM Partnership</a></li>
+                        <li><a href="/español">Español</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RSave - Trusted Solutions. All rights reserved.</p>
+                <p>Serving California and Texas - We do the heavy lifting so you don't have to.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

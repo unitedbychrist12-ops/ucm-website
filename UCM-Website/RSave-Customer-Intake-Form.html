@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Save - Service Quote Request</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .form-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+        
+        .form-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .form-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 1rem;
+        }
+        
+        .form-section h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1e3a8a;
+            box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.1);
+        }
+        
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+        
+        .checkbox-grid label {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.2s ease;
+        }
+        
+        .checkbox-grid label:hover {
+            background-color: #f3f4f6;
+        }
+        
+        .checkbox-grid input[type="checkbox"] {
+            margin-right: 0.5rem;
+            margin-bottom: 0;
+            width: auto;
+        }
+        
+        .referral-source {
+            background: #fef3c7;
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .referral-source h4 {
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .submit-btn {
+            background: #1e3a8a;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #1e40af;
+        }
+        
+        .ucm-note {
+            background: #ecfdf5;
+            border: 1px solid #10b981;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        
+        .ucm-note h4 {
+            color: #047857;
+            margin-bottom: 0.5rem;
+        }
+        
+        .ucm-note p {
+            color: #065f46;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            
+            .checkbox-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h1>R Save Service Quote</h1>
+            <p>Save money on essential services while supporting a great cause</p>
+        </div>
+        
+        <form class="form-container" name="rsave-quote" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="rsave-quote">
+            
+            <div class="form-section">
+                <h3>Contact Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name *</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name *</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Service Address *</label>
+                    <input type="text" id="address" name="address" placeholder="Street Address, City, State, ZIP" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Services Interested In</h3>
+                <div class="checkbox-grid">
+                    <label><input type="checkbox" name="services" value="fiber-internet"> Fiber Internet</label>
+                    <label><input type="checkbox" name="services" value="cell-phone"> Cell Phone Plans</label>
+                    <label><input type="checkbox" name="services" value="tv-streaming"> TV/Streaming</label>
+                    <label><input type="checkbox" name="services" value="solar"> Solar Installation</label>
+                    <label><input type="checkbox" name="services" value="roofing"> Roofing</label>
+                    <label><input type="checkbox" name="services" value="merchant-services"> Merchant Services (Business)</label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Current Services & Bills</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="current-internet">Current Internet Provider</label>
+                        <input type="text" id="current-internet" name="current-internet" placeholder="e.g., Spectrum, AT&T, Verizon">
+                    </div>
+                    <div class="form-group">
+                        <label for="internet-bill">Monthly Internet Bill</label>
+                        <input type="number" id="internet-bill" name="internet-bill" placeholder="$">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="current-cell">Current Cell Provider</label>
+                        <input type="text" id="current-cell" name="current-cell" placeholder="e.g., Verizon, AT&T, T-Mobile">
+                    </div>
+                    <div class="form-group">
+                        <label for="cell-bill">Monthly Cell Bill</label>
+                        <input type="number" id="cell-bill" name="cell-bill" placeholder="$">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="electric-bill">Average Monthly Electric Bill (for solar quotes)</label>
+                    <input type="number" id="electric-bill" name="electric-bill" placeholder="$">
+                </div>
+            </div>
+
+            <div class="form-section referral-source">
+                <h4>How did you hear about R Save? *</h4>
+                <div class="checkbox-grid">
+                    <label><input type="radio" name="referral-source" value="ucm-website" required> UCM Website (ucm.live)</label>
+                    <label><input type="radio" name="referral-source" value="google-search" required> Google Search</label>
+                    <label><input type="radio" name="referral-source" value="facebook-ad" required> Facebook Ad</label>
+                    <label><input type="radio" name="referral-source" value="flyer" required> Flyer/Brochure</label>
+                    <label><input type="radio" name="referral-source" value="event" required> Event/Booth</label>
+                    <label><input type="radio" name="referral-source" value="door-to-door" required> Door-to-Door Rep</label>
+                    <label><input type="radio" name="referral-source" value="referral" required> Friend/Family Referral</label>
+                    <label><input type="radio" name="referral-source" value="other" required> Other</label>
+                </div>
+                
+                <div class="form-group" style="margin-top: 1rem;">
+                    <label for="referral-details">If referral or other, please specify:</label>
+                    <input type="text" id="referral-details" name="referral-details" placeholder="Who referred you or how else did you hear about us?">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Best Time to Contact</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-preference">Preferred Contact Method</label>
+                        <select id="contact-preference" name="contact-preference">
+                            <option value="phone">Phone Call</option>
+                            <option value="text">Text Message</option>
+                            <option value="email">Email</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="best-time">Best Time to Call</label>
+                        <select id="best-time" name="best-time">
+                            <option value="morning">Morning (8am-12pm)</option>
+                            <option value="afternoon">Afternoon (12pm-5pm)</option>
+                            <option value="evening">Evening (5pm-8pm)</option>
+                            <option value="anytime">Anytime</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="additional-info">Additional Information or Questions</label>
+                    <textarea id="additional-info" name="additional-info" rows="4" placeholder="Tell us about any specific needs, timeline, or questions you have..."></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Get My Free Quote</button>
+            
+            <div class="ucm-note">
+                <h4>Supporting United by Christ Ministries</h4>
+                <p>When you choose R Save services through UCM's website, 80% of profits support addiction recovery and homeless assistance programs. Thank you for helping restore lives!</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
