@@ -1,4 +1,4 @@
-// UCM Website JavaScript
+// UCM Website JavaScript - Updated Version
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('a[href^="#"]');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Mobile menu toggle (if needed)
+    // Mobile menu toggle
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     
@@ -38,4 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
         });
     }
+
+    // Add scroll effect to navbar
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.backdropFilter = 'blur(10px)';
+        } else {
+            navbar.style.backgroundColor = '#FFFFFF';
+            navbar.style.backdropFilter = 'none';
+        }
+    });
 });
