@@ -1,14 +1,33 @@
-# UCM Images
+# UCM Website Images
 
-This folder contains all images for the United by Christ Ministries website.
+## Required Photos:
 
-## Image Guidelines:
-- **Logo:** Use for navigation and branding
-- **Hero images:** Large, inspiring photos for main sections
-- **Ministry photos:** Show UCM's work and impact
-- **Team photos:** Leadership and staff
+### 1. Hero Background
+- **File:** hero-background.jpg
+- **Size:** 1920x1080 pixels
+- **Content:** Inspiring community service, people helping others, or uplifting landscape
+- **Source:** Unsplash.com search "community volunteers helping"
 
-## Optimization:
-- Keep file sizes under 1MB for web performance
-- Use descriptive filenames
-- JPG for photos, PNG for logos with transparency
+### 2. Ministry Photos (Optional)
+- outreach-ministry.jpg
+- housing-ministry.jpg  
+- recovery-program.jpg
+- volunteer-team.jpg
+
+### 3. Success Stories (Optional)
+- success-story-1.jpg
+- success-story-2.jpg
+- testimonial-photo.jpg
+
+## Photo Sources:
+- **Unsplash.com** (free, high quality)
+- **Pexels.com** (free)
+- **Pixabay.com** (free)
+
+## Search Terms:
+- "community volunteers helping"
+- "people praying together"
+- "homeless assistance"
+- "addiction recovery group"
+- "family reunion happy"
+- "professional counseling"

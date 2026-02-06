@@ -1,4 +1,4 @@
-// UCM Website JavaScript - Updated Version
+// UCM Website JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('a[href^="#"]');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Mobile menu toggle
+    // Mobile menu toggle (if needed)
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     
@@ -38,16 +38,96 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
         });
     }
-
-    // Add scroll effect to navbar
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.backdropFilter = 'blur(10px)';
-        } else {
-            navbar.style.backgroundColor = '#FFFFFF';
-            navbar.style.backdropFilter = 'none';
-        }
-    });
 });
+
+// Founder testimonial dropdown toggle
+function toggleFounderStory() {
+    const founderStory = document.getElementById('founderStory');
+    const toggleIcon = document.querySelector('.toggle-icon');
+    
+    if (founderStory.style.display === 'none' || founderStory.style.display === '') {
+        founderStory.style.display = 'block';
+        toggleIcon.classList.add('rotated');
+        toggleIcon.textContent = '▲';
+    } else {
+        founderStory.style.display = 'none';
+        toggleIcon.classList.remove('rotated');
+        toggleIcon.textContent = '▼';
+    }
+}
+
+// Show intake form modal/popup
+function showIntakeForm() {
+    // Create modal overlay
+    const modal = document.createElement('div');
+    modal.className = 'intake-modal-overlay';
+    modal.innerHTML = `
+        <div class="intake-modal">
+            <div class="modal-header">
+                <h3>UCM Street Outreach Intake Process</h3>
+                <button class="close-modal" onclick="closeIntakeModal()">&times;</button>
+            </div>
+            <div class="modal-content">
+                <p><strong>Our volunteers use this respectful, simple process to connect with people in need:</strong></p>
+                
+                <div class="intake-steps">
+                    <div class="step">
+                        <h4>1. Immediate Needs Assessment</h4>
+                        <p>• Food, water, shelter, medical attention<br>
+                        • Safety and urgent concerns<br>
+                        • Basic comfort items</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h4>2. Respectful Information Gathering</h4>
+                        <p>• Only what they're comfortable sharing<br>
+                        • Contact information (if desired)<br>
+                        • Current living situation</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h4>3. Service Connection</h4>
+                        <p>• What help they want<br>
+                        • UCM program interest<br>
+                        • Referrals to other services</p>
+                    </div>
+                    
+                    <div class="step">
+                        <h4>4. Follow-up Plan</h4>
+                        <p>• Scheduled appointments<br>
+                        • Return visit plans<br>
+                        • Resource materials provided</p>
+                    </div>
+                </div>
+                
+                <div class="volunteer-training">
+                    <h4>Volunteer Training Includes:</h4>
+                    <ul>
+                        <li>Trauma-informed care approaches</li>
+                        <li>De-escalation techniques</li>
+                        <li>Resource navigation</li>
+                        <li>Safety protocols</li>
+                        <li>Respectful communication</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-actions">
+                    <a href="#contact" class="btn btn-primary" onclick="closeIntakeModal()">Volunteer with Street Outreach</a>
+                    <button class="btn btn-secondary" onclick="closeIntakeModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
+}
+
+// Close intake form modal
+function closeIntakeModal() {
+    const modal = document.querySelector('.intake-modal-overlay');
+    if (modal) {
+        document.body.removeChild(modal);
+        document.body.style.overflow = 'auto';
+    }
+}
